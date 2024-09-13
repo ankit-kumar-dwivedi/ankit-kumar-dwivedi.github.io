@@ -1,17 +1,22 @@
 [
     {
         "name": "LinkedIn",
-        "link": "https://linkedin.com/in/your-profile",
+        "link": "https://www.linkedin.com/in/ankit-dwivedi/",
         "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/linkedin-icon.svg"
     },
     {
-        "name": "Instagram",
-        "link": "https://instagram.com/your-profile",
-        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/instagram-icon.svg"
+        "name": "GitHub",
+        "link": "https://github.com/ankit-kumar-dwivedi",
+        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/github-icon.svg"
     },
     {
-        "name": "GitHub",
-        "link": "https://github.com/your-profile",
-        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/github-icon.svg"
+        "name": "Medium",
+        "link": "https://medium.com/@dwivedi.ankit21",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Medium_icon.svg"
+    },
+    {
+        "name": "Instagram",
+        "link": "http://instagram.com/ankit._.dwivedi",
+        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/instagram-icon.svg"
     }
 ]

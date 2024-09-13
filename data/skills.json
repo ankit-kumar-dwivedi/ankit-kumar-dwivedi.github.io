@@ -1,47 +1,15 @@
 [
   {
-    "name": "Redis",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
-  },
-  {
-    "name": "Kafka",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
-  },
-  {
-    "name": "Scala",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/scala.svg"
-  },
-  {
-    "name": "PostgresSQL",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/postgresql.svg"
-  },
-  {
     "name": "Java",
     "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/java.svg"
   },
   {
-    "name": "Redis",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
+    "name": "Python",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1280px-Python-logo-notext.svg.png"
   },
   {
-    "name": "Kafka",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
-  },
-  {
-    "name": "Scala",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/scala.svg"
-  },
-  {
-    "name": "Redis",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
-  },
-  {
-    "name": "Kafka",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
-  },
-  {
-    "name": "Kafka",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
+    "name": "C++",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1280px-ISO_C%2B%2B_Logo.svg.png"
   },
   {
     "name": "Scala",
@@ -52,35 +20,35 @@
     "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/postgresql.svg"
   },
   {
-    "name": "Java",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/java.svg"
+    "name": "MongoDB",
+    "icon": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/MongoDB_Fores-Green.svg/2880px-MongoDB_Fores-Green.svg.png"
   },
   {
-    "name": "Redis",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
-  },
-  {
-    "name": "Kafka",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
-  },
-  {
-    "name": "Scala",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/scala.svg"
-  },
-  {
-    "name": "Redis",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
+    "name": "MySQL",
+    "icon": "https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/MySQL_logo.svg/2560px-MySQL_logo.svg.png"
   },
   {
     "name": "Kafka",
     "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/kafka.svg"
   },
   {
-    "name": "Scala",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/scala.svg"
+    "name": "Redis",
+    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/redis.svg"
   },
   {
-    "name": "PostgresSQL",
-    "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/postgresql.svg"
+    "name": "gRPC",
+    "icon": "https://grpc.io/img/logos/grpc-icon-color.png"
+  },
+  {
+    "name": "Elasticsearch",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Elasticsearch_logo.svg/2880px-Elasticsearch_logo.svg.png"
+  },
+  {
+    "name": "GitHub",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png"
+  },
+  {
+    "name": "Git",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/2880px-Git-logo.svg.png"
   }
 ]

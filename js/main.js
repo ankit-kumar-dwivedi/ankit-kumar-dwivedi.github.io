@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
-
-
     // Typing effect for multiple texts
     const typingEffect = (element, texts, speed) => {
         let textIndex = 0;
