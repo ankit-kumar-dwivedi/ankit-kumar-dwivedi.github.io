@@ -1,0 +1,15 @@
+[
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University of XYZ",
+      "date": "Aug 2012 – May 2016",
+      "description": "Specialized in software engineering and data science."
+    },
+    {
+      "degree": "Master of Science in Software Engineering",
+      "institution": "University of ABC",
+      "date": "Sep 2016 – Jun 2018",
+      "description": "Focused on advanced software development methodologies."
+    }
+  ]
+  

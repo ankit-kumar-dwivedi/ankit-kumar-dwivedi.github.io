@@ -1,0 +1,20 @@
+[
+  {
+      "title": "Delivery Allocation System",
+      "description": "Delivery allocation system to deliver orders to the customers via delivery partners. This project was built using Spring Boot and H2 in memory database.",
+      "link": "https://project-one.example.com",
+      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
+  },
+  {
+      "title": "Human Resource Management System",
+      "description": "HR management software, consisting of leave tracking, leave approval and payroll system functionality built using React and Spring Boot.",
+      "link": "https://project-two.example.com",
+      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
+  },
+  {
+      "title": "Algorithm Visualizer",
+      "description": "A full stack project built using Java, JavaScript, and PostgreSQL. Algorithm Visualizer is an application to learn algorithms through visual animations. It provides a platform for viewing data structures and algorithms in action.",
+      "link": "https://project-three.example.com",
+      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
+  }
+]

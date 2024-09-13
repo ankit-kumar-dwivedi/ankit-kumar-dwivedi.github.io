@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Agoda",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Agoda_logo_2019.svg/2880px-Agoda_logo_2019.svg.png",
+    "position": "Senior Software Engineer",
+    "date": "September 2024 – Present",
+    "location": "Gurugram, India",
+    "description": "Working on some cool stuff so you can plan your next vacation"
+  },
+  {
+    "company": "Stripe",
+    "logo": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/stripe.svg",
+    "position": "Software Engineer",
+    "date": "February 2024 – July 2024",
+    "location": "Dublin, Ireland",
+    "description": "Improved the durability of webhooks by moving webhook generation in-band, enhancing reliability and timeliness while decreasing failure rates. Refactored Stripe's Internal API DSL for code de-tangling and efficiency."
+  },
+  {
+    "company": "Google",
+    "logo": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/google.svg",
+    "position": "Software Engineer 2",
+    "date": "June 2022 – February 2024",
+    "location": "Bangalore, India",
+    "description": "As part of the Monetizer team within Ads Billing, worked on 'Crush' to provide unified granular data for revenue, billing, and usage for Ads products. Utilized FlumeJava to scale processing from 6 million rows per month to 30 billion rows. Worked on the Geo Moderation team, implementing road geometry-related user-generated content using C++."
+  },
+  {
+    "company": "Disney+ Hotstar",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Disney%2B_Hotstar_2024.svg/2608px-Disney%2B_Hotstar_2024.svg.png",
+    "position": "Software Development Engineer 1",
+    "date": "August 2021 – May 2022",
+    "location": "Bangalore, India",
+    "description": "Worked as a backend developer in the content platform team, building robust, secure, and scalable microservices for Hotstar OTT services. Implemented show and episode enhancements as part of the Hotstar X project, collaborating with the product team to create new customer experiences."
+  },
+  {
+    "company": "Wheelseye Technology",
+    "logo": "assets/images/wheelseye_logo.png",
+    "position": "Software Development Engineer 1",
+    "date": "January 2020 – July 2021",
+    "location": "Gurugram, India",
+    "description": "Worked on the Fastag team in a microservice-based architecture. Designed an automated system to identify incorrect toll deductions and implemented a near real-time auto-recharge mechanism."
+  }
+]
