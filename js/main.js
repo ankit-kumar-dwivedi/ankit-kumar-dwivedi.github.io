@@ -1,42 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Typing effect for multiple texts
-    const typingEffect = (element, texts, speed) => {
-        let textIndex = 0;
-        let charIndex = 0;
-        let currentText = '';
-        let isDeleting = false;
-        const interval = setInterval(() => {
-            if (textIndex < texts.length) {
-                if (isDeleting) {
-                    currentText = texts[textIndex].substring(0, charIndex--);
-                } else {
-                    currentText = texts[textIndex].substring(0, charIndex++);
-                }
-                element.innerHTML = currentText;
-
-                if (!isDeleting && charIndex === texts[textIndex].length) {
-                    isDeleting = true;
-                    setTimeout(() => { }, 1000); // Pause before deleting
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    textIndex++;
-                    if (textIndex === texts.length) {
-                        textIndex = 0; // Restart typing effect
-                    }
-                }
-            }
-        }, speed);
+    const initTypingEffect = () => {
+        new TypeIt("#typing-effect", {
+            speed: 100, // Speed of typing
+            loop: false,
+            breakLines: false // Prevent line breaks
+        })
+            .type("Welcome to my website.")
+            .pause(1000)
+            .move(-8, { delay: 300 }) // Move back to replace "website"
+            .type("portfolio ") // Add "portfolio"
+            .pause(1000)
+            .move(8, { delay: 300 }) // Move back to replace "website"
+            .delete(32, { delay: 100 }) // Delete "software development."
+            .type("I am passionate about software development.")
+            .pause(1000)
+            .delete(21) // Delete "software development."
+            .type("scalable systems.") // Add "scalable systems."
+            .pause(1000)
+            .move(-17, { delay: 300 }) // Move back to replace last character
+            .type("designing ") // Complete the sentence
+            .move(18, { delay: 300 }) // Move back to replace last charact   
+            .pause(1000)
+            .delete()
+            .type("Let’s build something amazing together!")
+            .pause(1000)
+            .delete()
+            .type("<(^_^)>")
+            .go();
     };
 
-    const typingElement = document.getElementById('typing-effect');
-    if (typingElement) {
-        typingEffect(typingElement, [
-            'Welcome to my portfolio website.',
-            'I am passionate about software development.',
-            'Let\'s build something amazing together!'
-        ], 100); // Adjust speed as needed
-    }
+    initTypingEffect(); // Initialize the typing effect
 
     // Fetch and populate social icons
     const fetchSocialIcons = async () => {

@@ -132,64 +132,39 @@ body {
     }
 }
 
-/* Typing Effect Styling */
 .typing-effect {
     font-size: 2rem;
-    /* Default font size */
     white-space: normal;
-    /* Allow text wrapping */
     overflow: hidden;
-    /* Hide any overflowed text */
-    border-right: 3px solid #22C55E;
-    /* Terminal cursor color */
-    color: #e5e7eb;
-    /* Text color */
-    font-family: 'Courier New', monospace;
-    /* Terminal-like font */
-    background-color: #000;
-    /* Terminal background color */
-    display: inline-block;
+    border-right: .15em solid #00ff00; /* Cursor effect */
     max-width: 100%;
-    /* Ensure it doesn't overflow the container */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite; /* Cursor blinking effect */
+    /* Adjust to fit content width */
 }
-
-/* Responsive Typing Effect */
+#typeit-example {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black; /* Dark background for terminal effect */
+    color: #00ff00; /* Green text for terminal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00ff00; }
+}
 @media (max-width: 768px) {
     .typing-effect {
         font-size: 1.5rem;
-        /* Reduce font size on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .typing-effect {
         font-size: 1.2rem;
-        /* Further reduce font size on very small screens */
-    }
-}
-
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-
-    /* Full width to match text length */
-}
-
-@keyframes blink {
-    from {
-        border-color: #22C55E;
-    }
-
-    to {
-        border-color: transparent;
     }
 }
 
@@ -209,49 +184,6 @@ body {
 }
 
 
-/* Typing Effect Styling */
-.typing-effect {
-    font-size: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #22C55E;
-    /* Terminal cursor color */
-    color: #e5e7eb;
-    /* Text color */
-    font-family: 'Courier New', monospace;
-    /* Terminal-like font */
-    background-color: #000;
-    /* Terminal background color */
-    display: inline-block;
-}
-
-/* Keyframes for typing effect */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    from {
-        border-color: #22C55E;
-    }
-
-    to {
-        border-color: transparent;
-    }
-}
-
-/* Apply typing animation */
-.typing-effect {
-    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
-}
-
-
 /* Ensure no overflow */
 #about {
     overflow: hidden;
@@ -265,12 +197,6 @@ body {
     color: #fff;
 }
 
-#about h2.typing-effect {
-    margin-top: 1rem;
-    font-size: 2rem;
-    color: #22C55E;
-}
-
 #about p {
     margin-top: 1.5rem;
     font-size: 1.25rem;
@@ -278,36 +204,6 @@ body {
     color: #e5e7eb;
 }
 
-/* Update this in your styles.css */
-
-/* Skills Section */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    /* Dynamic columns */
-    gap: 20px;
-    /* Space between skill items */
-    justify-items: center;
-    /* Center items horizontally */
-    align-items: center;
-    /* Center items vertically */
-    padding: 20px;
-    /* Padding around the grid */
-}
-
-/* Skill icon styling */
-.skill-icon {
-    width: 80px;
-    /* Adjusted size for better visibility */
-    height: 80px;
-    transition: transform 0.3s;
-}
-
-/* Hover effect */
-.skill-icon:hover {
-    transform: scale(1.2);
-    /* Enlarge on hover */
-}
 
 .social-icon {
     width: 30px;
@@ -552,4 +448,62 @@ section {
     /* Green background on hover */
     color: #ffffff;
     /* White text on hover */
+}
+
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Grid adapts dynamically based on screen width */
+    gap: 20px;
+    /* Space between skill items */
+    justify-items: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    padding: 40px;
+    /* Padding around the grid */
+    margin-left: 5%;
+}
+
+/* Skill icon styling */
+.skill-icon {
+    max-width: 75%;
+    height: auto;
+    /* Ensure icons maintain their aspect ratio */
+    transition: transform 0.3s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2);
+    /* Enlarge on hover */
+}
+
+/* Media Query for Small Screens (Phones) */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Show 3 columns on tablets or smaller devices */
+        gap: 15px;
+        /* Reduce gap to adjust for smaller screens */
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Ensure there are at least 2 columns on phones */
+        gap: 10px;
+        /* Further reduce gap */
+        padding: 10px;
+        /* Reduce padding */
+    }
+
+    .skill-icon {
+        max-width: 70px;
+        /* Reduce icon size for better fit on small screens */
+        height: auto;
+    }
 }

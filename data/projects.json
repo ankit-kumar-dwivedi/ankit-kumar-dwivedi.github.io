@@ -1,20 +1,38 @@
 [
-  {
-      "title": "Delivery Allocation System",
-      "description": "Delivery allocation system to deliver orders to the customers via delivery partners. This project was built using Spring Boot and H2 in memory database.",
-      "link": "https://project-one.example.com",
-      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
-  },
-  {
-      "title": "Human Resource Management System",
-      "description": "HR management software, consisting of leave tracking, leave approval and payroll system functionality built using React and Spring Boot.",
-      "link": "https://project-two.example.com",
-      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
-  },
-  {
-      "title": "Algorithm Visualizer",
-      "description": "A full stack project built using Java, JavaScript, and PostgreSQL. Algorithm Visualizer is an application to learn algorithms through visual animations. It provides a platform for viewing data structures and algorithms in action.",
-      "link": "https://project-three.example.com",
-      "image": "https://blog.planview.com/wp-content/uploads/2020/01/Top-6-Software-Development-Methodologies.jpg"
-  }
+    {
+        "title": "Delivery Allocation System",
+        "description": "Delivery allocation system to deliver orders to the customers via delivery partners. This project was built using Spring Boot and H2 in memory database.",
+        "link": "https://github.com/ankit-kumar-dwivedi/GrofersDeliveryAssignment",
+        "image": "assets/images/grofers-assignment.png"
+    },
+    {
+        "title": "Vectorization of bitmaps",
+        "description": "Google summer of code 2019 project to develop an option for Synfig to perform vectorization of bitmap/raster images using an algorithm(s) of vectorization from OpenToonz.",
+        "link": "https://summerofcode.withgoogle.com/archive/2019/projects/6474348691456000",
+        "image": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*2yR2ZTEi9PfvX1GmAt7oRw.png"
+    },
+    {
+        "title": "Actor Quiz",
+        "description": "AuthorQuiz App is a Beginner Web Application. After learning the basics of Reactjs. This project was bootstrapped with create-react-app.",
+        "link": "https://github.com/ankit-kumar-dwivedi/ActorQuiz",
+        "image": "https://raw.githubusercontent.com/ankit-kumar-dwivedi/ActorQuiz/master/demo.gif"
+    },
+    {
+        "title": "Salvador- A Space Adventure",
+        "description": "A 2D action adventure game in which you fight alien creatures and collect keys to save our planet from destruction!",
+        "link": "https://oxcafebabe.itch.io/salvador",
+        "image": "assets/images/salvador-game.png"
+    },
+    {
+        "title": "Smart kaksha",
+        "description": "A smart classroom app made for students and teachers for better interaction",
+        "link": "https://github.com/ankit-kumar-dwivedi/smartKaksha",
+        "image": "assets/images/smartclass.png"
+    },
+    {
+        "title": "Algorithm Visualizer",
+        "description": "A full stack project built using Java, JavaScript, and PostgreSQL. Algorithm Visualizer is an application to learn algorithms through visual animations. It provides a platform for viewing data structures and algorithms in action.",
+        "link": "https://github.com/ankit-kumar-dwivedi/Algorithm-Visualizer",
+        "image": "https://raw.githubusercontent.com/rana11shubham/Algorithm-Visualizer/master/Sample%20Outputs/s5.PNG"
+    }
 ]

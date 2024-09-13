@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -21,13 +22,16 @@
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#blogs" class="nav-link">Blogs</a></li>
     </ul>
-    <a href="your-resume-link" class="resume-button">Resume</a>
+    <a href="https://www.linkedin.com/in/ankit-dwivedi/" class="resume-button">Resume</a>
   </nav>
 
   <section id="about" class="h-screen flex flex-col justify-center items-center hero-bg text-center">
     <h1><img src="assets/images/android-chrome-192x192.png" alt="I am as lazy as a Koala"></h1>
     <h1 class="text-6xl font-bold">Hello, I'm Ankit Dwivedi</h1>
-    <h2 id="typing-effect" class="typing-effect mt-4"></h2> <!-- Ensure this is present -->
+    <div id="typeit-example">
+      <h2 id="typing-effect" class="typing-effect mt-4"></h2> <!-- Ensure this is present -->
+    </div>
+
     <p class="mt-6 text-lg max-w-2xl">I'm a software engineer specializing in building high-quality websites and
       applications. Currently focused on developing innovative solutions at Agoda.</p>
     <div class="mt-6 flex space-x-4">
@@ -59,9 +63,9 @@
 
   <!-- Skills Section (Add this if needed for Skills) -->
   <section id="skills" class="py-24 bg-gray-800">
-    <div class="container mx-auto text-center px-4">
+    <div class=" text-center px-4">
       <h2 class="text-4xl font-bold mb-12">Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 skills-container">
+      <div class="skills-container">
         <!-- Skills will be dynamically added here -->
       </div>
     </div>
