@@ -1,0 +1,17 @@
+[
+    {
+        "name": "LinkedIn",
+        "link": "https://linkedin.com/in/your-profile",
+        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/linkedin-icon.svg"
+    },
+    {
+        "name": "Instagram",
+        "link": "https://instagram.com/your-profile",
+        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/instagram-icon.svg"
+    },
+    {
+        "name": "GitHub",
+        "link": "https://github.com/your-profile",
+        "icon": "https://raw.githubusercontent.com/gilbarbara/logos/main/logos/github-icon.svg"
+    }
+]

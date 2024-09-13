@@ -1,0 +1,391 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f2937; /* Assuming a dark background for the site */
+    color: #e5e7eb;
+}
+
+/* Navbar Styles */
+nav {
+    position: fixed;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    right: 20px; /* Distance from the right */
+    background-color: #111827;
+    border-radius: 0 0 9999px 9999px; /* Pill shape at bottom */
+    padding: 1em 1em; /* Horizontal padding for spacing */
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    align-items: center; /* Center items vertically */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-sizing: content-box; /* Ensure padding does not affect width */
+    margin-left: 40px; /* Gap from the start of the navbar */
+    margin-right: 40px; /* Gap from the end of the navbar */
+}
+
+/* Navbar List */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* For pill shape */
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Navbar Link Hover and Active States */
+.nav-link:hover, .nav-link.active {
+    background-color: #1f2937;
+    color: #22C55E;
+}
+
+/* Resume Button */
+.resume-button {
+    border: 2px solid #22C55E;
+    padding: 0.5rem 1rem;
+    color: #22C55E;
+    border-radius: 9999px; /* For pill shape */
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.resume-button:hover {
+    background-color: #22C55E;
+    color: #fff;
+}
+
+/* Typing Effect */
+.typing-effect {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #22C55E;
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; } /* Full width to match text length */
+}
+
+@keyframes blink {
+    from { border-color: #22C55E; }
+    to { border-color: transparent; }
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(33, 116, 194, 0.4)), url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+/* Typing Effect Styling */
+.typing-effect {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #22C55E; /* Terminal cursor color */
+    color: #e5e7eb; /* Text color */
+    font-family: 'Courier New', monospace; /* Terminal-like font */
+    background-color: #000; /* Terminal background color */
+    display: inline-block;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from { border-color: #22C55E; }
+    to { border-color: transparent; }
+}
+
+/* Apply typing animation */
+.typing-effect {
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+
+/* Ensure no overflow */
+#about {
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+
+#about h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#about h2.typing-effect {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #22C55E;
+}
+
+#about p {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    max-width: 800px;
+    color: #e5e7eb;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+    filter: brightness(0) invert(1);
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Timeline Styles */
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin: 40px 0; /* Increased margin for better spacing */
+    padding-left: 80px; /* Adjusted space for the line and dot */
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(9,14,21,1) 20%, rgba(20,32,48,0.9436997319034852) 46%, rgba(44,68,105,1) 100%);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    background-color: #334155; /* Slightly lighter on hover */
+}
+
+/* Timeline Dot */
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 20px; /* Adjusted based on padding */
+    left: -10px; /* Positioned outside the padding area */
+    width: 24px;
+    height: 24px;
+    background-color: #10b981; /* Updated to a distinct color */
+    border-radius: 50%;
+    border: 4px solid #1e293b; /* Dot border color matching the item background */
+}
+
+/* Company Logo */
+.company-logo {
+    max-width: 60px; /* Adjusted for better visual balance */
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* Date */
+.date {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 10px; /* Added spacing between date and content */
+}
+
+/* Timeline Details */
+.timeline-details {
+    display: none; /* Ensure details are hidden by default */
+    padding-top: 10px; /* Add padding for better spacing */
+    color: #e5e7eb; /* Text color for better readability */
+}
+
+.timeline-item.active .timeline-details {
+    display: block; /* Show details when item is active */
+}
+
+/* Ensure that the content in timeline details stands out */
+.timeline-details p {
+    margin: 0;
+}
+/* Timeline Details */
+.timeline-details {
+    display: none; /* Ensure details are hidden by default */
+    padding-top: 10px; /* Add padding for better spacing */
+    color: #e5e7eb; /* Text color for better readability */
+}
+
+.timeline-item.active .timeline-details {
+    display: block; /* Show details when item is active */
+}
+
+/* Sections Styling */
+section {
+    padding: 60px 0;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+/* Update this in your styles.css */
+
+/* General styling for the skills section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if needed */
+    justify-content: center; /* Center the items horizontally */
+    gap: 10px; /* Small gap between items */
+}
+
+/* Skill icon styling */
+.skill-icon {
+    width: 60px; /* Fixed width for consistency */
+    height: 60px; /* Fixed height for consistency */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    transition: transform 0.3s;
+}
+
+/* Hover effect */
+.skill-icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Tooltip (title attribute automatically handled by the browser) */
+.skill-container {
+    position: relative;
+}
+
+/* Projects Section Styling */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: #2d3748;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.project-card-description {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.project-card-link {
+    color: #22C55E;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-card-link:hover {
+    color: #1f2937;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+
+/* Blog Item Styling */
+.blog-item {
+    background-color: #2d3748;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    min-height: 300px;  /* Ensure all blog posts occupy similar space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-item p {
+    font-size: 0.875rem;
+    color: #a0aec0;
+    margin-bottom: 10px;
+}
+
+.blog-item a {
+    color: #48bb78;
+    text-decoration: none;
+}
+
+.blog-item:hover {
+    background-color: #4a5568;
+    transform: translateY(-5px);  /* Slight hover effect */
+}
+
+.view-all-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
