@@ -28,7 +28,7 @@ function startBGM() {
   if (audioCtx.state === 'suspended') audioCtx.resume();
 
   bgmGain = audioCtx.createGain();
-  bgmGain.gain.value = 0.2; // Base volume louder
+  bgmGain.gain.value = 0.3; // 75% of previous volume
   bgmGain.connect(audioCtx.destination);
   
   const tempo = 120;
@@ -60,7 +60,7 @@ function startBGM() {
       osc.frequency.value = notes[noteIndex];
       
       gain.gain.setValueAtTime(0, nextNoteTime);
-      gain.gain.linearRampToValueAtTime(0.1, nextNoteTime + 0.05); // Louder note volume
+      gain.gain.linearRampToValueAtTime(0.18, nextNoteTime + 0.05); // Louder note volume
       gain.gain.linearRampToValueAtTime(0, nextNoteTime + (secondsPerBeat/2));
       
       const filter = audioCtx.createBiquadFilter();
