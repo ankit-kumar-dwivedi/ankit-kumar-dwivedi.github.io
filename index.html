@@ -1,89 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit Dwivedi</title>
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ankit Dwivedi | Space-Gamified Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore the career timeline, projects, and blogs of Ankit Dwivedi (Software Engineer) in an interactive 2D space game or a modern classic resume layout.">
+  <meta name="author" content="Ankit Dwivedi">
+  <meta name="keywords" content="Ankit Dwivedi, Software Engineer, Portfolio, Google, Stripe, Agoda, Hotstar, Web Game, Interactive Resume">
+  
+  <!-- Social Media Metadata -->
+  <meta property="og:title" content="Ankit Dwivedi | Space-Gamified Portfolio">
+  <meta property="og:description" content="An interactive game-like timeline and resume website showcasing engineering work at Google, Stripe, Agoda, and more.">
+  <meta property="og:type" content="website">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 </head>
+<body>
 
-<body class="bg-gray-900 text-white">
+  <!-- Welcome / Onboarding Overlay -->
+  <div id="welcome-overlay" class="overlay-container">
+    <div class="overlay-card glass-panel">
+      <h2>🚀 Welcome to Ankit's Universe!</h2>
+      <p>Explore my career timeline as an interactive space game.</p>
+      <div class="overlay-instructions">
+        <p>🔊 <strong>Pro Tip:</strong> Turn up your volume for the best experience!</p>
+        <p>🎮 <strong>Controls:</strong> Use arrow keys/WASD (or touch joystick) to fly around and visit stations.</p>
+        <p>📄 <strong>Classic View:</strong> Prefer a normal resume? Switch to "Classic Mode" at the top right anytime!</p>
+      </div>
+      <button id="start-tour-btn" class="primary-btn pulse-anim">Start Exploring!</button>
+    </div>
+  </div>
 
-  <!-- Modern Navbar -->
-  <nav class="floating-navbar">
-    <ul class="nav-items">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#blogs" class="nav-link">Blogs</a></li>
-    </ul>
-    <a href="https://www.linkedin.com/in/ankit-dwivedi/" class="resume-button">Resume</a>
+  <!-- Floating HUD Navigation Header -->
+  <nav id="hud-navbar" class="glass-panel">
+    <div class="hud-logo">
+      <span>🚀</span> Ankit Dwivedi
+    </div>
+    
+    <!-- Fast-Travel Station Links (Game autopilot & Classic smooth scroll) -->
+    <div class="nav-stations">
+      <a href="#" class="hud-btn fast-travel active" data-station="about">Home</a>
+      <a href="#" class="hud-btn fast-travel" data-station="wheelseye">Wheelseye</a>
+      <a href="#" class="hud-btn fast-travel" data-station="hotstar">Hotstar</a>
+      <a href="#" class="hud-btn fast-travel" data-station="google">Google</a>
+      <a href="#" class="hud-btn fast-travel" data-station="stripe">Stripe</a>
+      <a href="#" class="hud-btn fast-travel" data-station="agoda">Agoda</a>
+      <a href="#" class="hud-btn fast-travel" data-station="projects">Projects</a>
+      <a href="#" class="hud-btn fast-travel" data-station="blogs">Blogs</a>
+    </div>
+    
+    <!-- Utility Buttons -->
+    <button id="audio-btn" class="hud-btn" title="Unmute Audio">🔇</button>
+    <button id="mode-switch-btn" class="hud-btn">🚀 <span>Game Mode</span></button>
   </nav>
 
-  <section id="about" class="h-screen flex flex-col justify-center items-center hero-bg text-center">
-    <h1><img src="assets/images/android-chrome-192x192.png" alt="I am as lazy as a Koala"></h1>
-    <h1 class="text-6xl font-bold">Hello, I'm Ankit Dwivedi</h1>
-    <div id="typeit-example">
-      <h2 id="typing-effect" class="typing-effect mt-4"></h2> <!-- Ensure this is present -->
+  <!-- ==================== GAME MODE VIEW ==================== -->
+  <div id="game-view">
+    <!-- Main Interactive Canvas -->
+    <canvas id="game-canvas"></canvas>
+    
+    <!-- Autopilot Notification Badge -->
+    <div id="autopilot-hud">
+      <span class="autopilot-pulse">●</span> Autopiloting to coordinates...
     </div>
-
-    <p class="mt-6 text-lg max-w-2xl">I'm a software engineer specializing in building high-quality websites and
-      applications. Currently focused on developing innovative solutions at Agoda.</p>
-    <div class="mt-6 flex space-x-4">
-      <div id="social-icons" class="flex space-x-4"></div>
+    
+    <!-- Keyboard Input Instructions (Hidden on Mobile) -->
+    <div id="instructions-overlay" class="glass-panel">
+      <h4>FLIGHT INSTRUCTIONS</h4>
+      <ul>
+        <li>Fly ship: <span class="key-cap">W</span> <span class="key-cap">A</span> <span class="key-cap">S</span> <span class="key-cap">D</span> / <span class="key-cap">▲</span> <span class="key-cap">◀</span> <span class="key-cap">▼</span> <span class="key-cap">▶</span></li>
+        <li>Autopilot: <span style="color:var(--text-primary)">Tap space to fly there</span></li>
+        <li>Docking: <span style="color:var(--text-primary)">Get close to any Space Station</span></li>
+      </ul>
     </div>
-  </section>
-
-
-  <section id="experience" class="py-24 bg-gray-800">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Career Journey</h2>
-      <div class="timeline-container">
-        <!-- Timeline items will be dynamically added here -->
+    
+    <!-- Virtual Mobile D-Pad Joystick (Visible only on touch screens) -->
+    <div id="joystick-container">
+      <div id="joystick-knob"></div>
+    </div>
+    
+    <!-- Docked Station Overlay Details Panel -->
+    <aside id="dock-panel" class="glass-panel">
+      <div class="dock-header">
+        <div class="dock-title-container">
+          <h2 id="p-company" class="dock-company">Station Name</h2>
+          <p id="p-role" class="dock-role">Software Engineer</p>
+          <span id="p-period" class="dock-period">Sep 2024 - Present</span>
+        </div>
+        <button id="close-panel" class="close-btn" title="Close Panel">×</button>
       </div>
-    </div>
-  </section>
+      
+      <!-- Dynamic body container filled by game engine -->
+      <div id="p-body" class="dock-body"></div>
+    </aside>
+  </div>
 
+  <!-- ==================== CLASSIC MODE VIEW ==================== -->
+  <main id="classic-view">
+    <div class="classic-container" id="classic-content"></div>
+  </main>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-24 bg-gray-900">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
-      <div class="projects-container">
-        <!-- Projects will be dynamically added here -->
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Skills Section (Add this if needed for Skills) -->
-  <section id="skills" class="py-24 bg-gray-800">
-    <div class=" text-center px-4">
-      <h2 class="text-4xl font-bold mb-12">Skills</h2>
-      <div class="skills-container">
-        <!-- Skills will be dynamically added here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Blogs Section -->
-  <section id="blogs" class="py-24 bg-gray-800">
-    <div class="container mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-12">Recent Blog Posts</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 blogs-container">
-        <!-- Blogs will be dynamically added here -->
-      </div>
-    </div>
-  </section>
-  <footer class="bg-gray-900 py-8 text-center text-gray-400">
-    <p>&copy; 2024. Made with ♥ by Ankit Dwivedi. All rights reserved. </p>
-  </footer>
-  <script src="js/main.js"></script>
+  <!-- Javascript Modules -->
+  <script src="data.js"></script>
+  <script src="game.js"></script>
 </body>
-
 </html>
