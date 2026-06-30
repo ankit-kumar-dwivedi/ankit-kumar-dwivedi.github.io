@@ -28,7 +28,7 @@ function startBGM() {
   if (audioCtx.state === 'suspended') audioCtx.resume();
 
   bgmGain = audioCtx.createGain();
-  bgmGain.gain.value = 0.05; // Base volume
+  bgmGain.gain.value = 0.2; // Base volume louder
   bgmGain.connect(audioCtx.destination);
   
   const tempo = 120;
@@ -47,19 +47,25 @@ function startBGM() {
       stopBGM();
       return;
     }
-    while (nextNoteTime < audioCtx.currentTime + 0.1) {
+    
+    // Resync if we fall behind (e.g. tab backgrounded)
+    if (nextNoteTime < audioCtx.currentTime) {
+      nextNoteTime = audioCtx.currentTime + 0.1;
+    }
+    
+    while (nextNoteTime < audioCtx.currentTime + 0.2) { // Lookahead increased slightly
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
-      osc.type = 'triangle';
+      osc.type = 'square'; // More retro and louder
       osc.frequency.value = notes[noteIndex];
       
       gain.gain.setValueAtTime(0, nextNoteTime);
-      gain.gain.linearRampToValueAtTime(0.06, nextNoteTime + 0.05);
+      gain.gain.linearRampToValueAtTime(0.1, nextNoteTime + 0.05); // Louder note volume
       gain.gain.linearRampToValueAtTime(0, nextNoteTime + (secondsPerBeat/2));
       
       const filter = audioCtx.createBiquadFilter();
       filter.type = 'lowpass';
-      filter.frequency.value = 600;
+      filter.frequency.value = 1500; // Open filter more
       
       osc.connect(filter);
       filter.connect(gain);
